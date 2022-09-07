@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .beforeFooter {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .iconsWrapper {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .iconDiv {
+            text-align: center;
+            display: grid;
+            grid-template-rows: 35px 20px auto;
+            gap: 30px;
+            font-family: 'Avenir';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 28px;
+            /* or 175% */
+            letter-spacing: 1px;
+
+            color: #00244A;
+        }
+
+        .imgDiv {
+            display: flex;
+            justify-content: center;
+        }
+
+        .myImage {
+            height: 100% !important;
+            width: auto !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="beforeFooter">
+        <div class="iconsWrapper">
+            <div class="iconDiv">
+                <div class="imgDiv">
+                    <img src="./images/image1.png" class="myImage" />
+                </div>
+                <div>UNIK GAVEINDPAKNING</div>
+                <div>Royal Copenhagens gaveindpakning er ganske unik og baseret på en teknik udviklet af Dronning
+                    Ingrid, der havde en forkærlighed for origami. Husk blot at tilvælge "Gaveindpakning" ved checkout
+                </div>
+            </div>
+            <div class="iconDiv">
+                <div class="imgDiv">
+                    <img src="./images/image2.png" class="myImage" />
+                </div>
+                <div>BRUDGARANTI</div>
+                <div>Selvom porcelæn er skrøbeligt, er porcelæn fra Royal Copenhagen skabt til at blive brugt hver dag.
+                    Skulle dit porcelæn få skår eller brud, tilbyder vi to års Brudgaranti på produkter i 1.sortering
+                </div>
+            </div>
+            <div class="iconDiv">
+                <div class="imgDiv">
+                    <img src="./images/image3.png" class="myImage" />
+                </div>
+                <div>FORLÆNGET RETURRET</div>
+                <div>Her på royalcopenhagen.com kan du som altid shoppe det fulde sortiment af Royal Copenhagens
+                    porcelæn. Lige nu tilbyder vi forlænget returret på 60 dage.</div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <!-- <script src="./script.js"></script> -->
+</body>
+
+</html>
