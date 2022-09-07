@@ -29,6 +29,12 @@
             gap: 30px;
         }
 
+        @media only screen and (max-width: 760px) {
+            .iconsWrapper {
+                display: none;
+            }
+        }
+
         .iconDiv {
             text-align: center;
             display: grid;
@@ -41,7 +47,7 @@
             line-height: 28px;
             /* or 175% */
             letter-spacing: 1px;
-
+            max-width: 250px;
             color: #00244A;
         }
 
@@ -54,11 +60,41 @@
             height: 100% !important;
             width: auto !important;
         }
+
+        .dotDiv {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        .dotSpan {
+            cursor: pointer;
+            height: 6px;
+            width: 6px;
+            background-color: #D9D9D9;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+
+        .smallScreenDiv {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media only screen and (min-width: 760px) {
+            .smallScreenDiv {
+                display: none;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <div class="beforeFooter">
+    <!-- <div class="beforeFooter">
         <div class="iconsWrapper">
             <div class="iconDiv">
                 <div class="imgDiv">
@@ -87,9 +123,16 @@
                     porcelæn. Lige nu tilbyder vi forlænget returret på 60 dage.</div>
             </div>
         </div>
+    </div> -->
+    <!-- <div class="dotDiv">
+        <span class="dotSpan"></span>
+        <span class="dotSpan"></span>
+        <span class="dotSpan"></span>
+    </div> -->
+    <div id="footer">
+        Hello I am footer
     </div>
-    <div id="footer"></div>
-    <!-- <script src="./script.js"></script> -->
+    <script src="./script.js"></script>
 </body>
 
 </html>

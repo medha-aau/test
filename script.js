@@ -4,6 +4,7 @@ const divIcons = document.createElement('div');
 divIcons.classList.add('beforeFooter');
 
 const iconsWrapper = document.createElement('div');
+iconsWrapper.setAttribute('id', 'iconsWrapper');
 iconsWrapper.classList.add('iconsWrapper');
 
 const iconData = [
@@ -48,4 +49,49 @@ iconsWrapper.append(...elementNodes);
 
 divIcons.append(iconsWrapper);
 
+const dotDiv = document.createElement('div');
+dotDiv.classList.add('dotDiv');
+const dotList = []
+for (let i = 1; i <= 3; i++) {
+    const dotSpan = document.createElement('span');
+    dotSpan.setAttribute('id', `id-${i}`)
+    dotSpan.classList.add('dotSpan');
+    dotSpan.addEventListener('click', e => {
+        const id = e.target.id;
+        const idx = parseInt(id.split('-')[1], 10) - 1;
+        const { image, text, subText } = iconData[idx];
+        document.getElementById('imgDiv120').innerHTML = image;
+        document.getElementById('textDiv120').innerHTML = text;
+        document.getElementById('subTextDiv120').innerHTML = subText;
+        // if (dot === e.target) dot.style.background = 'black';
+        // else dot.style.background = '#D9D9D9'
+    })
+
+    dotList.push(dotSpan);
+    dotDiv.append(dotSpan);
+}
+
+const singleIcon = document.createElement('div');
+singleIcon.classList.add('iconDiv')
+const singleIconImageDiv = document.createElement('div');
+singleIconImageDiv.classList.add('imgDiv');
+singleIconImageDiv.setAttribute('id', 'imgDiv120');
+singleIconImageDiv.innerHTML = iconData[0].image;
+
+const singleIconText = document.createElement('div');
+singleIconText.setAttribute('id', 'textDiv120');
+singleIconText.innerHTML = iconData[0].text;
+const singleIconSub = document.createElement('div');
+singleIconSub.innerHTML = iconData[0].subText;
+singleIconSub.setAttribute('id', 'subTextDiv120');
+singleIconSub.classList.add('subText');
+singleIcon.append(singleIconImageDiv, singleIconText, singleIconSub);
+
+const smallScreenDiv = document.createElement('div');
+smallScreenDiv.classList.add('smallScreenDiv');
+
+smallScreenDiv.append(singleIcon, dotDiv);
+
+
+body.insertBefore(smallScreenDiv, footer);
 body.insertBefore(divIcons, footer);
